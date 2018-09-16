@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		81DBE43E2E18FF7BE2478784 /* Pods_MVVM_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9145B41B805E6274399B1E6 /* Pods_MVVM_Demo.framework */; };
 		B9FD59EB214ECCC900FDB9CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD59EA214ECCC900FDB9CD /* AppDelegate.swift */; };
-		B9FD59ED214ECCC900FDB9CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD59EC214ECCC900FDB9CD /* ViewController.swift */; };
+		B9FD59ED214ECCC900FDB9CD /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD59EC214ECCC900FDB9CD /* MainVC.swift */; };
 		B9FD59F0214ECCC900FDB9CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9FD59EE214ECCC900FDB9CD /* Main.storyboard */; };
 		B9FD59F2214ECCCA00FDB9CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9FD59F1214ECCCA00FDB9CD /* Assets.xcassets */; };
 		B9FD59F5214ECCCA00FDB9CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9FD59F3214ECCCA00FDB9CD /* LaunchScreen.storyboard */; };
+		B9FD5A00214ECDCB00FDB9CD /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD59FF214ECDCB00FDB9CD /* MainViewModel.swift */; };
+		B9FD5A02214ED59900FDB9CD /* AppDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FD5A01214ED59900FDB9CD /* AppDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,11 +22,13 @@
 		433DC217F55771F303CA1CD8 /* Pods-MVVM Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MVVM Demo/Pods-MVVM Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		B9FD59E7214ECCC900FDB9CD /* MVVM Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9FD59EA214ECCC900FDB9CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B9FD59EC214ECCC900FDB9CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B9FD59EC214ECCC900FDB9CD /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		B9FD59EF214ECCC900FDB9CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B9FD59F1214ECCCA00FDB9CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9FD59F4214ECCCA00FDB9CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B9FD59F6214ECCCA00FDB9CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9FD59FF214ECDCB00FDB9CD /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		B9FD5A01214ED59900FDB9CD /* AppDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataManager.swift; sourceTree = "<group>"; };
 		E9145B41B805E6274399B1E6 /* Pods_MVVM_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVM_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -79,13 +83,39 @@
 			isa = PBXGroup;
 			children = (
 				B9FD59EA214ECCC900FDB9CD /* AppDelegate.swift */,
-				B9FD59EC214ECCC900FDB9CD /* ViewController.swift */,
-				B9FD59EE214ECCC900FDB9CD /* Main.storyboard */,
+				B9FD59FE214ECDAF00FDB9CD /* Models */,
+				B9FD59FD214ECDAA00FDB9CD /* Views */,
+				B9FD59FC214ECD9A00FDB9CD /* ViewModels */,
 				B9FD59F1214ECCCA00FDB9CD /* Assets.xcassets */,
-				B9FD59F3214ECCCA00FDB9CD /* LaunchScreen.storyboard */,
 				B9FD59F6214ECCCA00FDB9CD /* Info.plist */,
 			);
 			path = "MVVM Demo";
+			sourceTree = "<group>";
+		};
+		B9FD59FC214ECD9A00FDB9CD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B9FD59FF214ECDCB00FDB9CD /* MainViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B9FD59FD214ECDAA00FDB9CD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B9FD59EC214ECCC900FDB9CD /* MainVC.swift */,
+				B9FD59EE214ECCC900FDB9CD /* Main.storyboard */,
+				B9FD59F3214ECCCA00FDB9CD /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B9FD59FE214ECDAF00FDB9CD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B9FD5A01214ED59900FDB9CD /* AppDataManager.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,8 +248,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9FD59ED214ECCC900FDB9CD /* ViewController.swift in Sources */,
+				B9FD59ED214ECCC900FDB9CD /* MainVC.swift in Sources */,
+				B9FD5A02214ED59900FDB9CD /* AppDataManager.swift in Sources */,
 				B9FD59EB214ECCC900FDB9CD /* AppDelegate.swift in Sources */,
+				B9FD5A00214ECDCB00FDB9CD /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,7 +399,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L578Q4W44T;
 				INFOPLIST_FILE = "MVVM Demo/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mobiledevelopment.MVVM-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -383,7 +418,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L578Q4W44T;
 				INFOPLIST_FILE = "MVVM Demo/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mobiledevelopment.MVVM-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
